@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block style %}
+<style>
+.hungry-section {
+    padding: 80px 0;
+    background-color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.hungry-heading {
+    font-size: 5rem;
+    font-weight: bold;
+    letter-spacing: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.food-item {
+    margin-top: 40px;
+}
+
+.food-item img {
+    width: 100px; /* Adjusted for better visibility */
+    height: auto;
+}
+
+.order-btn {
+    border: 2px solid black;
+    padding: 8px 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: transparent;
+    transition: 0.3s;
+}
+
+.order-btn:hover {
+    background: black;
+    color: white;
+}
+</style>
+{% endblock %}
+
+{% block main %}
+<img src="{% static 'images/hero.jpeg' %}" alt="Promotional Image" style="width: 100vw; height: 100vh; display: block;">
+
+<section class="hungry-section">
+    <h1 class="hungry-heading">RESTAURANTS</h1>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-2 text-center food-item">
+                <img src="{% static 'images/restaurants/kfc.png' %}" alt="KFC">
+                <h5>KFC</h5>
+                <button class="btn order-btn">Order Now</button>
+            </div>
+
+            <div class="col-md-2 text-center food-item">
+                <img src="{% static 'images/restaurants/dominos.png' %}" alt="Domino's">
+                <h5>Domino's</h5>
+                <button class="btn order-btn">Order Now</button>
+            </div>
+
+            <div class="col-md-2 text-center food-item">
+                <img src="{% static 'images/restaurants/mcdonalds.png' %}" alt="McDonald's">
+                <h5>McDonald's</h5>
+                <button class="btn order-btn">Order Now</button>
+            </div>
+
+            <div class="col-md-2 text-center food-item">
+                <img src="{% static 'images/restaurants/subway.png' %}" alt="Subway">
+                <h5>Subway</h5>
+                <button class="btn order-btn">Order Now</button>
+            </div>
+
+            <div class="col-md-2 text-center food-item">
+                <img src="{% static 'images/restaurants/starbucks.png' %}" alt="Starbucks">
+                <h5>Starbucks</h5>
+                <button class="btn order-btn">Order Now</button>
+            </div>
+
+            <div class="col-md-2 text-center food-item">
+                <img src="{% static 'images/restaurants/burgerking.png' %}" alt="Burger King">
+                <h5>Burger King</h5>
+                <button class="btn order-btn">Order Now</button>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
